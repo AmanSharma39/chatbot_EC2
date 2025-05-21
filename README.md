@@ -28,7 +28,7 @@ This project demonstrates how to deploy a basic chatbot API built with Python an
   - `22` (SSH)
   - `5000` (Custom TCP for Flask testing)
   - *(or use port 80 if deploying in production with sudo)*
-![image alt] (https://github.com/AmanSharma39/chatbot_EC2/blob/9dcfa929a00e7ae9c5d41326fa7c5acc91894f46/Screenshot%202025-05-21%20111911.png)
+![image alt](https://github.com/AmanSharma39/chatbot_EC2/blob/9dcfa929a00e7ae9c5d41326fa7c5acc91894f46/Screenshot%202025-05-21%20111911.png)
 
 ### 2. SSH into Instance
 
@@ -77,7 +77,7 @@ curl -X POST http://<EC2_PUBLIC_IP>:5000/chat \
      -H "Content-Type: application/json" \
      -d '{"message":"Hi"}'
 ```
-![image alt] (https://github.com/AmanSharma39/chatbot_EC2/blob/9dcfa929a00e7ae9c5d41326fa7c5acc91894f46/Screenshot%202025-05-21%20114542.png)
+![image alt](https://github.com/AmanSharma39/chatbot_EC2/blob/9dcfa929a00e7ae9c5d41326fa7c5acc91894f46/Screenshot%202025-05-21%20114542.png)
 
 ### Expected response:
 ```
