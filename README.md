@@ -34,24 +34,19 @@ This project demonstrates how to deploy a basic chatbot API built with Python an
 ```bash
 ssh -i your-key.pem ubuntu@<EC2_PUBLIC_IP>
 ```
-## Install Python & Set Up Virtual Environment
-
+## 3. Install Python & Set Up Virtual Environment
+```
 sudo apt update
 sudo apt install python3-venv -y
 python3 -m venv chatbotenv
 source chatbotenv/bin/activate
 pip install flask
-
-## Create chatbot.py
-
+```
+## 4. Create chatbot.py
+```
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-
-```bash
-@app.route("/", methods=["GET"])
-def home():
-    return "Flask Chatbot is running!"
 
 @app.route("/chat", methods=["POST"])
 def chat():
@@ -61,19 +56,20 @@ def chat():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
 ```
 
-##  Run the Chatbot
+## 5. Run the Chatbot
 
 ```bash
 python chatbot.py
 ```
 
-## Test the Chatbot
-### From Browser
+## 🧪Test the Chatbot
+### ✅From Browser
 http://<EC2_PUBLIC_IP>:5000/
 
-## From Terminal (POST request)
+## ✅From Terminal (POST request)
 
 ```bash
 curl -X POST http://<EC2_PUBLIC_IP>:5000/chat \
@@ -82,3 +78,7 @@ curl -X POST http://<EC2_PUBLIC_IP>:5000/chat \
 ```
 
 ### Expected response:
+
+```
+{"response": "Hello! You said: Hi"}
+```
