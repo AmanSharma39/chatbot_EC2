@@ -11,12 +11,8 @@ This project demonstrates how to deploy a basic chatbot API built with Python an
 - Deployed on Ubuntu EC2 instance
 - Uses virtual environment for clean Python package management
 
----
 
 ## 📁 Project Structure
-
-
----
 
 ## 🛠 Setup Instructions
 
